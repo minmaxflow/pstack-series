@@ -14,7 +14,7 @@ const docsDir = path.join(root, 'docs')
 const outDir = path.join(root, 'wechat', 'out')
 
 const css = `
-.wx { font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif; font-size: 16px; color: #1f2328; line-height: 1.9; word-break: break-word; }
+.wx { font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif; font-size: 16px; color: #1f2328; line-height: 1.9; word-break: break-word; text-align: left; }
 .wx h2 { font-size: 18px; font-weight: 700; line-height: 1.5; margin: 2.2em 0 0.9em; text-align: center; color: #111827; }
 .wx h3 { font-size: 16.5px; font-weight: 700; line-height: 1.5; margin: 1.6em 0 0.5em; color: #33475b; }
 .wx p { margin: 1.1em 0; }
