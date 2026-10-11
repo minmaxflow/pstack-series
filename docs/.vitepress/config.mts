@@ -21,6 +21,9 @@ export default withMermaid(
         { text: '程序', link: '/11-understanding-diagnosis-skillmeta' },
         { text: '调度', link: '/15-poteto-mode-runtime' }
       ],
+      socialLinks: [
+        { icon: 'github', link: 'https://github.com/minmaxflow/pstack-series' }
+      ],
       sidebar: [
         {
           text: '第一部分 · 原则',
@@ -89,7 +92,7 @@ export default withMermaid(
         }
       },
       footer: {
-        message: '基于 pstack 的原则整理讲解',
+        message: '源码在 <a href="https://github.com/minmaxflow/pstack-series">GitHub</a> · pstack 本体在 <a href="https://github.com/backnotprop/pstack">backnotprop/pstack</a>',
         copyright: 'MIT'
       }
     }
