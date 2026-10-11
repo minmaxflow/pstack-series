@@ -4,7 +4,7 @@
 
 ## pstack 的来历
 
-pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。她在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。
+pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。她在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。她的技术背景偏函数式,这一点在整套原则里看得很清楚:总和类型、纯函数、状态纪律这些母题反复出现。
 
 他做这套东西的起点是一个判断:AI 正在写太多 slop,注水、低质的代码。而"跑得快但质量差"不是一个值得追求的目标。原文里有一句话被反复引用:
 
