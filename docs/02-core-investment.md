@@ -134,10 +134,10 @@ experience-first 和 foundational-thinking 是一对。原文说得很清楚,基
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/principle-foundational-thinking/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-foundational-thinking/SKILL.md)
-- [`skills/principle-experience-first/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-experience-first/SKILL.md)
-- [`skills/principle-exhaust-the-design-space/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-exhaust-the-design-space/SKILL.md)
-- [`skills/principle-build-the-lever/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-build-the-lever/SKILL.md)
-- [`skills/principle-attack-the-premise/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-attack-the-premise/SKILL.md)
+- [`skills/principle-foundational-thinking/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-foundational-thinking/SKILL.md)
+- [`skills/principle-experience-first/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-experience-first/SKILL.md)
+- [`skills/principle-exhaust-the-design-space/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-exhaust-the-design-space/SKILL.md)
+- [`skills/principle-build-the-lever/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-build-the-lever/SKILL.md)
+- [`skills/principle-attack-the-premise/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-attack-the-premise/SKILL.md)

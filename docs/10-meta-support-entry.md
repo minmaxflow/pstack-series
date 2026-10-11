@@ -158,14 +158,14 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/correct/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/correct/SKILL.md)
-- [`skills/reflect/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/reflect/SKILL.md)
-- [`skills/automate-me/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/automate-me/SKILL.md)
-- [`skills/show-me-your-work/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/show-me-your-work/SKILL.md)
-- [`skills/figure-it-out/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/figure-it-out/SKILL.md)
-- [`skills/setup-pstack/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/setup-pstack/SKILL.md)
-- [`skills/poteto-help/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-help/SKILL.md)
-- [`skills/bro/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/bro/SKILL.md)
-- [`skills/make-bot-ui/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/make-bot-ui/SKILL.md)
+- [`skills/correct/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/correct/SKILL.md)
+- [`skills/reflect/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/reflect/SKILL.md)
+- [`skills/automate-me/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/automate-me/SKILL.md)
+- [`skills/show-me-your-work/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/show-me-your-work/SKILL.md)
+- [`skills/figure-it-out/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/figure-it-out/SKILL.md)
+- [`skills/setup-pstack/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/setup-pstack/SKILL.md)
+- [`skills/poteto-help/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-help/SKILL.md)
+- [`skills/bro/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/bro/SKILL.md)
+- [`skills/make-bot-ui/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/make-bot-ui/SKILL.md)

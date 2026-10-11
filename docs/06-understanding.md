@@ -252,10 +252,10 @@ Slack 是一把双刃剑。它经常是**真正的决定发生的地方**,尤其
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/how/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/how/SKILL.md)
-- [`skills/why/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/why/SKILL.md)
-- [`skills/teach/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/teach/SKILL.md)
-- [`skills/recall/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/recall/SKILL.md)
-- [`skills/blast-radius/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/blast-radius/SKILL.md)
+- [`skills/how/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/how/SKILL.md)
+- [`skills/why/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/why/SKILL.md)
+- [`skills/teach/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/teach/SKILL.md)
+- [`skills/recall/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/recall/SKILL.md)
+- [`skills/blast-radius/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/blast-radius/SKILL.md)

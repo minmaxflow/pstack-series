@@ -27,6 +27,16 @@ npm run docs:build
 
 站点地址是 `https://<用户名>.github.io/<仓库名>/`。如果仓库名不是 `pstack-series`,记得把 `docs/.vitepress/config.mts` 里的 `base` 改成 `/<仓库名>/`;如果发布在用户主页仓库(`<用户名>.github.io`),改回 `'/'`。
 
+## 公众号
+
+把同一批 Markdown 转成能直接粘进微信公众号编辑器的 HTML:
+
+```bash
+npm run wechat:build
+```
+
+产物在 `wechat/out/`,打开 `index.html` 选一篇,在浏览器里全选复制,粘进公众号编辑器即可。细节见 [`wechat/README.md`](./wechat/README.md),标题与摘要见 [`wechat/公众号发布清单.md`](./wechat/公众号发布清单.md)。
+
 ## 写作约定
 
 给继续写这个系列的人看,在 [`STYLE.md`](./STYLE.md)。读者可以略过。

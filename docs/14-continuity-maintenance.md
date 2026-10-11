@@ -84,9 +84,9 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/poteto-mode/playbooks/session-pickup.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
-- [`skills/poteto-mode/playbooks/pause-safely.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
-- [`skills/poteto-mode/playbooks/multi-phase-plan.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
-- [`skills/poteto-mode/playbooks/worktree-cleanup.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)
+- [`skills/poteto-mode/playbooks/session-pickup.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/session-pickup.md)
+- [`skills/poteto-mode/playbooks/pause-safely.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/pause-safely.md)
+- [`skills/poteto-mode/playbooks/multi-phase-plan.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md)
+- [`skills/poteto-mode/playbooks/worktree-cleanup.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/worktree-cleanup.md)

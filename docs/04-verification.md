@@ -115,10 +115,10 @@ agent 报告完成了。CI 是绿的。你手动点了一下,功能是坏的。
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/principle-prove-it-works/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-prove-it-works/SKILL.md)
-- [`skills/principle-fix-root-causes/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-fix-root-causes/SKILL.md)
-- [`skills/principle-sequence-verifiable-units/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-sequence-verifiable-units/SKILL.md)
-- [`skills/principle-test-behavior-not-implementation/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-test-behavior-not-implementation/SKILL.md)
-- [`skills/principle-explain-the-number/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-explain-the-number/SKILL.md)
+- [`skills/principle-prove-it-works/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-prove-it-works/SKILL.md)
+- [`skills/principle-fix-root-causes/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-fix-root-causes/SKILL.md)
+- [`skills/principle-sequence-verifiable-units/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-sequence-verifiable-units/SKILL.md)
+- [`skills/principle-test-behavior-not-implementation/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-test-behavior-not-implementation/SKILL.md)
+- [`skills/principle-explain-the-number/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-explain-the-number/SKILL.md)

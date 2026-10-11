@@ -166,12 +166,12 @@ PR 是给一个人一分钟读完的 briefing,不是实验记录。它要让手�
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/poteto-mode/playbooks/opening-a-pr.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/opening-a-pr.md)
-- [`skills/poteto-mode/playbooks/babysit.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/babysit.md)
-- [`skills/poteto-mode/playbooks/shipping.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/shipping.md)
-- [`skills/poteto-mode/playbooks/autonomous-run.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autonomous-run.md)
-- [`skills/poteto-mode/playbooks/autopilot-full.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-full.md)
-- [`skills/poteto-mode/playbooks/autopilot-stack.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-stack.md)
-- [`skills/poteto-mode/playbooks/orchestrate.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/orchestrate.md)
+- [`skills/poteto-mode/playbooks/opening-a-pr.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/opening-a-pr.md)
+- [`skills/poteto-mode/playbooks/babysit.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/babysit.md)
+- [`skills/poteto-mode/playbooks/shipping.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/shipping.md)
+- [`skills/poteto-mode/playbooks/autonomous-run.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/autonomous-run.md)
+- [`skills/poteto-mode/playbooks/autopilot-full.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/autopilot-full.md)
+- [`skills/poteto-mode/playbooks/autopilot-stack.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/autopilot-stack.md)
+- [`skills/poteto-mode/playbooks/orchestrate.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/orchestrate.md)

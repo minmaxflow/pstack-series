@@ -112,10 +112,10 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/poteto-mode/playbooks/investigation.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
-- [`skills/poteto-mode/playbooks/runtime-forensics.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
-- [`skills/poteto-mode/playbooks/trace-forensics.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
-- [`skills/poteto-mode/playbooks/authoring-a-skill.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
-- [`skills/poteto-mode/playbooks/eval.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)
+- [`skills/poteto-mode/playbooks/investigation.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/investigation.md)
+- [`skills/poteto-mode/playbooks/runtime-forensics.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/runtime-forensics.md)
+- [`skills/poteto-mode/playbooks/trace-forensics.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/trace-forensics.md)
+- [`skills/poteto-mode/playbooks/authoring-a-skill.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/authoring-a-skill.md)
+- [`skills/poteto-mode/playbooks/eval.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/eval.md)

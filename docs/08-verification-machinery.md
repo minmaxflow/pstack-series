@@ -145,9 +145,9 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/tdd/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md)
-- [`skills/benchmark-checklist/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/benchmark-checklist/SKILL.md)
-- [`skills/create-verification-skill/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/create-verification-skill/SKILL.md)
-- [`skills/maintain-verification-skill/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/maintain-verification-skill/SKILL.md)
+- [`skills/tdd/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/tdd/SKILL.md)
+- [`skills/benchmark-checklist/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/benchmark-checklist/SKILL.md)
+- [`skills/create-verification-skill/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md)
+- [`skills/maintain-verification-skill/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md)

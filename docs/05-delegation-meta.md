@@ -76,8 +76,8 @@ guard-the-context-window 和 never-block-on-the-human 把上限从单个会话�
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/principle-guard-the-context-window/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-guard-the-context-window/SKILL.md)
-- [`skills/principle-never-block-on-the-human/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-never-block-on-the-human/SKILL.md)
-- [`skills/principle-encode-lessons-in-structure/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-encode-lessons-in-structure/SKILL.md)
+- [`skills/principle-guard-the-context-window/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-guard-the-context-window/SKILL.md)
+- [`skills/principle-never-block-on-the-human/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-never-block-on-the-human/SKILL.md)
+- [`skills/principle-encode-lessons-in-structure/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-encode-lessons-in-structure/SKILL.md)

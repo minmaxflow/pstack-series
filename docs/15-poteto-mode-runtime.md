@@ -125,8 +125,8 @@ flowchart LR
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/poteto-mode/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md)
-- [`agents/poteto-agent.md`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
-- [`agents/comment-sicko.md`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)
+- [`skills/poteto-mode/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/SKILL.md)
+- [`agents/poteto-agent.md`](https://github.com/cursor/plugins/blob/main/pstack/agents/poteto-agent.md)
+- [`agents/comment-sicko.md`](https://github.com/cursor/plugins/blob/main/pstack/agents/comment-sicko.md)

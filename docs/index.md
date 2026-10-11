@@ -4,7 +4,7 @@
 
 ## pstack 的来历
 
-pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。他在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。
+pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。她在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。
 
 他做这套东西的起点是一个判断:AI 正在写太多 slop,注水、低质的代码。而"跑得快但质量差"不是一个值得追求的目标。原文里有一句话被反复引用:
 
@@ -87,4 +87,4 @@ playbook 是什么:一段程序,编排 skill,带步骤、证据契约和完成�
 
 ---
 
-本系列的源码在 [GitHub](https://github.com/minmaxflow/pstack-series)。pstack 本体的仓库在 [backnotprop/pstack](https://github.com/backnotprop/pstack)。
+本系列的源码在 [GitHub](https://github.com/minmaxflow/pstack-series)。pstack 的上游在 [cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack),独立镜像在 [backnotprop/pstack](https://github.com/backnotprop/pstack)。

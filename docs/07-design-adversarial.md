@@ -127,9 +127,9 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/architect/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/architect/SKILL.md)
-- [`skills/arena/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/arena/SKILL.md)
-- [`skills/swarm/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/swarm/SKILL.md)
-- [`skills/interrogate/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/interrogate/SKILL.md)
+- [`skills/architect/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/architect/SKILL.md)
+- [`skills/arena/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/arena/SKILL.md)
+- [`skills/swarm/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/swarm/SKILL.md)
+- [`skills/interrogate/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/interrogate/SKILL.md)

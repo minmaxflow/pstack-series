@@ -143,11 +143,11 @@ model-the-domain 是更上面的一层。它先选整体形状,后面几条都�
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/principle-model-the-domain/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-model-the-domain/SKILL.md)
-- [`skills/principle-boundary-discipline/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-boundary-discipline/SKILL.md)
-- [`skills/principle-type-system-discipline/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-type-system-discipline/SKILL.md)
-- [`skills/principle-make-operations-idempotent/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-make-operations-idempotent/SKILL.md)
-- [`skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md)
-- [`skills/principle-separate-before-serializing-shared-state/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md)
+- [`skills/principle-model-the-domain/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-model-the-domain/SKILL.md)
+- [`skills/principle-boundary-discipline/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-boundary-discipline/SKILL.md)
+- [`skills/principle-type-system-discipline/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-type-system-discipline/SKILL.md)
+- [`skills/principle-make-operations-idempotent/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-make-operations-idempotent/SKILL.md)
+- [`skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md)
+- [`skills/principle-separate-before-serializing-shared-state/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md)

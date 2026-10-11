@@ -152,10 +152,10 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
+本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
 
-- [`skills/principle-laziness-protocol/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-laziness-protocol/SKILL.md)
-- [`skills/principle-subtract-before-you-add/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-subtract-before-you-add/SKILL.md)
-- [`skills/principle-minimize-reader-load/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-minimize-reader-load/SKILL.md)
-- [`skills/principle-redesign-from-first-principles/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-redesign-from-first-principles/SKILL.md)
-- [`skills/principle-outcome-oriented-execution/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-outcome-oriented-execution/SKILL.md)
+- [`skills/principle-laziness-protocol/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-laziness-protocol/SKILL.md)
+- [`skills/principle-subtract-before-you-add/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-subtract-before-you-add/SKILL.md)
+- [`skills/principle-minimize-reader-load/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-minimize-reader-load/SKILL.md)
+- [`skills/principle-redesign-from-first-principles/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-redesign-from-first-principles/SKILL.md)
+- [`skills/principle-outcome-oriented-execution/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-outcome-oriented-execution/SKILL.md)
