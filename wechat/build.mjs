@@ -37,7 +37,8 @@ const css = `
 .wx .refs p { font-size: 10px; line-height: 1.6; color: #94a3b8; margin: 0.5em 0; }
 .wx .refs ul { margin: 0.3em 0; padding-left: 1.1em; }
 .wx .refs li { font-size: 10px; line-height: 1.7; color: #94a3b8; margin: 0.15em 0; }
-.wx .refs code { font-size: 10px; background: #f4f5f7; color: #94a3b8; padding: 1px 3px; }
+.wx .refs code { font-size: 10px; background: none; color: inherit; padding: 0; font-family: inherit; border-radius: 0; }
+.wx .refs a { color: #94a3b8; text-decoration: none; }
 `
 
 marked.setOptions({ gfm: true, breaks: false })
