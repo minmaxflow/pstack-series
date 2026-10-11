@@ -3,4 +3,6 @@ docs/.vitepress/dist
 docs/.vitepress/cache
 wechat/out
 wechat/preview
+wechat/covers
+.wxprofile
 .DS_Store
