@@ -7,7 +7,8 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "wechat:build": "node wechat/build.mjs",
-    "wechat:mermaid": "mmdc -i wechat/mermaid/diagram-1.mmd -o wechat/mermaid/diagram-1.png -b white -s 2 && mmdc -i wechat/mermaid/diagram-2.mmd -o wechat/mermaid/diagram-2.png -b white -s 2"
+    "wechat:mermaid": "mmdc -i wechat/mermaid/diagram-1.mmd -o wechat/mermaid/diagram-1.png -b white -s 2 && mmdc -i wechat/mermaid/diagram-2.mmd -o wechat/mermaid/diagram-2.png -b white -s 2",
+    "wechat:preview": "node wechat/preview.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^12.0.0",

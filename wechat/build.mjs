@@ -14,25 +14,27 @@ const docsDir = path.join(root, 'docs')
 const outDir = path.join(root, 'wechat', 'out')
 
 const css = `
-.wx { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 16px; color: #24292f; line-height: 1.85; word-break: break-word; }
-.wx h1 { font-size: 23px; font-weight: 700; line-height: 1.4; margin: 1.2em 0 0.4em; letter-spacing: -0.3px; }
-.wx h2 { font-size: 19px; font-weight: 700; line-height: 1.5; margin: 1.9em 0 0.7em; padding-left: 11px; border-left: 3px solid #0b7a4b; }
-.wx h3 { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 1.5em 0 0.5em; color: #0b7a4b; }
-.wx p { margin: 1.05em 0; }
-.wx a { color: #0b7a4b; text-decoration: none; }
-.wx strong { font-weight: 700; color: #111418; }
-.wx code { font-family: "SFMono-Regular", Consolas, Menlo, monospace; font-size: 87%; background: #f2f4f6; color: #0b7a4b; padding: 2px 5px; border-radius: 4px; }
-.wx pre { background: #0d1117; border-radius: 8px; padding: 16px 18px; margin: 1.2em 0; overflow-x: auto; }
-.wx pre code { background: none; color: #c9d1d9; padding: 0; font-size: 13px; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
-.wx ul, .wx ol { margin: 1.05em 0; padding-left: 1.5em; }
-.wx li { margin: 0.35em 0; }
-.wx blockquote { margin: 1.2em 0; padding: 0.5em 1em; border-left: 3px solid #d0d7de; background: #f6f8fa; color: #57606a; }
+.wx { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 16px; color: #1f2328; line-height: 1.9; word-break: break-word; }
+.wx h1 { font-size: 24px; font-weight: 800; line-height: 1.4; margin: 1.1em 0 0.7em; letter-spacing: -0.4px; color: #111827; padding-bottom: 10px; border-bottom: 3px solid #4f46e5; }
+.wx h2 { font-size: 19px; font-weight: 800; line-height: 1.5; margin: 2em 0 0.8em; padding: 8px 14px; background: #eef2ff; border-left: 5px solid #4f46e5; border-radius: 6px; color: #312e81; }
+.wx h3 { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 1.6em 0 0.5em; color: #4f46e5; }
+.wx p { margin: 1.1em 0; }
+.wx a { color: #4f46e5; text-decoration: none; }
+.wx strong { font-weight: 700; color: #111827; }
+.wx code { font-family: "SFMono-Regular", Consolas, Menlo, monospace; font-size: 88%; background: #eef2ff; color: #4f46e5; padding: 2px 6px; border-radius: 4px; }
+.wx pre { background: #0f172a; border-radius: 8px; padding: 16px 18px; margin: 1.3em 0; overflow-x: auto; border-top: 3px solid #4f46e5; }
+.wx pre code { background: none; color: #e2e8f0; padding: 0; font-size: 13px; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+.wx ul, .wx ol { margin: 1.1em 0; padding-left: 1.5em; }
+.wx li { margin: 0.4em 0; }
+.wx li::marker { color: #4f46e5; }
+.wx blockquote { margin: 1.3em 0; padding: 0.7em 1em; background: #fff7ed; border-left: 5px solid #d97706; border-radius: 6px; color: #7c2d12; }
 .wx blockquote p { margin: 0.4em 0; }
-.wx table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 14px; }
-.wx th, .wx td { border: 1px solid #d8dee4; padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.6; }
-.wx th { background: #f6f8fa; font-weight: 700; }
-.wx hr { border: none; border-top: 1px solid #eaecef; margin: 1.8em 0; }
-.wx img { max-width: 100%; display: block; margin: 1.2em auto; }
+.wx table { border-collapse: collapse; width: 100%; margin: 1.3em 0; font-size: 14px; }
+.wx th, .wx td { border: 1px solid #dbe3f0; padding: 9px 11px; text-align: left; vertical-align: top; line-height: 1.6; }
+.wx th { background: #eef2ff; color: #312e81; font-weight: 700; }
+.wx tr:nth-child(even) td { background: #f8faff; }
+.wx hr { border: none; border-top: 2px dotted #c7d2fe; margin: 2em 0; }
+.wx img { max-width: 100%; display: block; margin: 1.3em auto; border-radius: 6px; }
 `
 
 marked.setOptions({ gfm: true, breaks: false })
