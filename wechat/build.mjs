@@ -34,6 +34,7 @@ const css = `
 .wx hr { border: none; border-top: 1px solid #e4e7eb; margin: 2em 0; }
 .wx img { max-width: 100%; display: block; margin: 1.3em auto; border-radius: 6px; }
 .wx .refs h2 { font-size: 11px; font-weight: 600; line-height: 1.4; margin: 2.4em 0 0.4em; padding: 0; border: none; text-align: left; color: #94a3b8; }
+.wx .refs, .wx .refs p, .wx .refs li { text-align: left; text-wrap: wrap; }
 .wx .refs p { font-size: 10px; line-height: 1.6; color: #94a3b8; margin: 0.5em 0; }
 .wx .refs ul { margin: 0.3em 0; padding-left: 1.1em; }
 .wx .refs li { font-size: 10px; line-height: 1.7; color: #94a3b8; margin: 0.15em 0; }

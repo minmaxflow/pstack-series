@@ -37,6 +37,6 @@ PR 是给一个人一分钟读完的 briefing,不是实验记录。它要让手�
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
+原文都在 pstack 上游仓库(`cursor/plugins`):
 
 - [`skills/poteto-mode/playbooks/opening-a-pr.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/playbooks/opening-a-pr.md)

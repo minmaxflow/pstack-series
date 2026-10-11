@@ -63,6 +63,6 @@ AI 写的东西有一个共同的气味:它让人读起来更费劲,而且往往
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
+原文都在 pstack 上游仓库(`cursor/plugins`):
 
 - [`skills/unslop/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md)

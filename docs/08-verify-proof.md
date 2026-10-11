@@ -43,7 +43,7 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
+原文都在 pstack 上游仓库(`cursor/plugins`):
 
 - [`skills/principle-prove-it-works/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-prove-it-works/SKILL.md)
 - [`skills/principle-fix-root-causes/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-fix-root-causes/SKILL.md)

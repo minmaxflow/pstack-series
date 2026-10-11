@@ -47,7 +47,7 @@
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
+原文都在 pstack 上游仓库(`cursor/plugins`):
 
 - [`skills/no-comments/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/no-comments/SKILL.md)
 - [`skills/typescript-best-practices/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/typescript-best-practices/SKILL.md)

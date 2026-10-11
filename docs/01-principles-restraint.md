@@ -76,7 +76,7 @@ AI coding 之后,代码的产出量第一次超过了人能读完的速度。于
 
 ## 参考
 
-本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
+原文都在 pstack 上游仓库(`cursor/plugins`):
 
 - [`skills/principle-laziness-protocol/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-laziness-protocol/SKILL.md)
 - [`skills/principle-subtract-before-you-add/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-subtract-before-you-add/SKILL.md)
