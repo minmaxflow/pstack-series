@@ -25,7 +25,7 @@ pstack 是一台分层搭起来的机器。
 | 层 | 是什么 | 数量 |
 |---|---|---|
 | Principles | 公理。每条是一个"何时适用"的不变式 | 24 |
-| Skills | 能力。how / why / arena / swarm / tdd 这些 | 27 |
+| Skills | 能力。how / why / arena / swarm / tdd 这些 | 28 |
 | Playbooks | 程序。按任务类别编排 skill 的步骤 | 23 |
 | poteto-mode | 调度。匹配任务、拷步骤、路由 skill | 1 |
 

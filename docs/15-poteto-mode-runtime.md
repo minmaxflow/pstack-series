@@ -76,7 +76,7 @@ subagent 默认是**全新的**。新工作给一个新 subagent,带一份合并
 
 ## 跨 harness
 
-它是在 Cursor 上写的,但一份配置解决不了移植。所以它用一节 Harness 把 Cursor 的每个具体件映射到别的 harness:subagent 工具的名字、`poteto-agent` 不在时怎么用一个通用 subagent 替代、模型设置文件写在哪、transcript 目录在哪、skill 文件夹在哪、结构化提问工具叫什么。它还点明 pstack 没有带但会引用到的东西(`create-skill`、`deslop`、`control-cli/control-ui`、`/loop`),以及在没有它们时怎么用别的办法顶上。这一节是 pstack 能真的跑在 Cursor 之外的原因。
+它最早是在 Cursor 上写的。Cursor 版的 `poteto-mode` 只面向 Cursor;而独立镜像 [`backnotprop/pstack`](https://github.com/backnotprop/pstack) 额外加了一节 Harness,把 Cursor 的每个具体件映射到别的 harness:subagent 工具的名字、`poteto-agent` 不在时怎么替代、模型设置文件写在哪、transcript 目录在哪、skill 文件夹在哪、结构化提问工具叫什么,并点明 pstack 没带但会引用到的东西(`create-skill`、`deslop`、`control-cli/control-ui`、`/loop`)在没有时怎么顶上。所以 pstack 能真的跑在 Cursor 之外,靠的是镜像这一节。
 
 ## 构造自下而上,执行自上而下
 

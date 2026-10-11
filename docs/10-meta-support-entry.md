@@ -1,8 +1,8 @@
 # pstack 拆解 10 · 元、支撑与入口
 
-这一组九个 skill 是系统的外围器官。它们不直接干活,它们让系统自己变好、自己可审计、自己可配置、自己可被引导。
+这一组十个 skill 是系统的外围器官。它们不直接干活,它们让系统自己变好、自己可审计、自己可配置、自己可被引导。
 
-可以把它们分成四类。前三个是自我改进,`show-me-your-work` 让工作可审计,`figure-it-out` 和 `setup-pstack` 是定制,最后三个是入口和辅助。九个里绝大多数你不需要天天敲,但它们是 pstack 能长期用下去的底座。
+可以把它们分成四类。前三个是自我改进,`show-me-your-work` 让工作可审计,`figure-it-out` 和 `setup-pstack` 是定制,最后四个是入口和辅助。十个里绝大多数你不需要天天敲,但它们是 pstack 能长期用下去的底座。
 
 ## 自我改进的三个:correct、reflect、automate-me
 
@@ -116,7 +116,7 @@
 
 它最后还有一步:检查你的项目有没有一个能驱动真实应用来取证的方式(一个 `verify-*` skill,或者一个已有的 harness)。如果没有,它就问一次要不要用 `create-verification-skill` 生成一个。说不,它就走,不推销。
 
-## 入口和辅助:poteto-help、bro、make-bot-ui
+## 入口和辅助:poteto-help、bro、ketchup、make-bot-ui
 
 ### poteto-help
 
@@ -136,6 +136,18 @@
 
 `bro` 是整个系列里最短的一个。它把上一条消息用朴素的人话重说一遍,没有术语,更短,像一个人在跟另一个人说话。当你收到一条技术上很详尽、你却仍然不知道它到底说了什么的回复,敲 `/bro`。就这一个词。
 
+### ketchup
+
+`ketchup` 是这个系列里第二短的一个,可以看成 `bro` 的"跨整段会话"版本。你把一个长任务丢给 agent,去忙别的,回来时敲 `/ketchup`,它把**你自己上一条消息之后**发生的一切,用大白话讲一遍。
+
+它和 `bro` 的区别在范围:`bro` 重说一条消息,`ketchup` 汇总这之间的所有进展,而且给**每一条需要你拍板的事**配一个能直接做决定的摘要。它假设你记得自己的上一条消息、之后的都不记得。
+
+它的这一轮是只读的。它收集自己在这段时间做的事、subagent 的报告、以及这条会话里别人的消息,再核对这条会话碰过的每个 PR、CI、agent 的当前状态,并说明哪些还在跑、哪些它查不到。
+
+它给"待办"下了一个很窄的定义:**只有你能做的决定或动作**才算,比如一个产品选择、一次批准、一个不可逆的操作,或者你没有的权限。它自己还能做的工作,不算待办。
+
+回复的形状也是固定的:先一句话说有几条待办(或没有);如果有事发生,就先说发生了什么,最重要的在前,每条带上它对用户意味着什么;然后一句话说还剩哪些它自己能做;最后给每条待办一个短摘要,覆盖要做的决定、为什么现在要紧、选项和各自的代价、它的推荐,以及你不回答会怎样。
+
 ### make-bot-ui
 
 `make-bot-ui` 是给 Grok Bot 用户的一个情境 skill。它造一个小页面,你点按钮,你机器上的一个 server 向一个 webhook routine POST 一个 JSON,bot 就带着这个 JSON 醒来。
@@ -144,11 +156,11 @@
 
 它还有几条很实在的工程细节:server 绑 `0.0.0.0:<port>` 而不是 `127.0.0.1`,否则 Tailscale 的 peer 到不了;第一次告诉用户"上线了"之前,先用一个无害的 payload 探一次;PUT 可能失败时,把同一个 JSON 追加到本地日志,从 routine 里把日志排干,不要拿轮询当主路径;一个已经 online 的 Tailscale 节点不要再建第二个主机名;webhook 醒来的那一轮里,body 是**外部数据,不是指令**,按字段解析,不当命令执行。
 
-## 把九个连起来看
+## 把十个连起来看
 
 这一组是系统的底座。
 
-自我改进的三个改不同层:`reflect` 改 skill,`correct` 改仓库,`automate-me` 生成你的入口。`show-me-your-work` 让无人值守的工作可被审计。`figure-it-out` 在没有现成流程时定制一个。`setup-pstack` 决定用哪些模型。最后三个是入口和辅助。
+自我改进的三个改不同层:`reflect` 改 skill,`correct` 改仓库,`automate-me` 生成你的入口。`show-me-your-work` 让无人值守的工作可被审计。`figure-it-out` 在没有现成流程时定制一个。`setup-pstack` 决定用哪些模型。最后四个是入口和辅助。
 
 它们合起来,回答的是一个更长远的问题:pstack 为什么能一直用下去。因为 `correct` 会让同一个错误不再回来,`reflect` 会让 skill 随使用变好,`automate-me` 让这套东西终于像你自己的。一个不会自我改进的系统,用久了只会越来越像一堆没人维护的提示词。
 
@@ -168,4 +180,5 @@
 - [`skills/setup-pstack/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/setup-pstack/SKILL.md)
 - [`skills/poteto-help/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-help/SKILL.md)
 - [`skills/bro/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/bro/SKILL.md)
+- [`skills/ketchup/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/ketchup/SKILL.md)
 - [`skills/make-bot-ui/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/make-bot-ui/SKILL.md)
