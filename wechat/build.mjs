@@ -60,14 +60,21 @@ for (const f of fs.readdirSync(outDir)) {
 }
 
 const only = process.argv[2]
-const files = fs
+let files = fs
   .readdirSync(docsDir)
-  .filter((f) => /^[0-9]{2}-.*\.md$/.test(f) && (!only || f === only || f.startsWith(only)))
+  .filter((f) => /^[0-9]{2}-.*\.md$/.test(f) || f === 'index.md')
   .sort()
+if (only) files = files.filter((f) => f === only || f.startsWith(only) || (only === '00' && f === 'index.md'))
 const built = []
 
 for (const file of files) {
-  const md = fs.readFileSync(path.join(docsDir, file), 'utf8')
+  let md = fs.readFileSync(path.join(docsDir, file), 'utf8')
+  // 首页(总览)作为公众号第 00 篇:去掉站内导航(怎么读/目录),保留结尾。
+  if (file === 'index.md') {
+    const cut = md.indexOf('## 怎么读')
+    const keep = md.indexOf('## 一句话')
+    if (cut > 0 && keep > cut) md = md.slice(0, cut) + '\n' + md.slice(keep)
+  }
   let body = marked.parse(toWechatMarkdown(md.replace(/^#\s+.*\r?\n/, '')))
   // 文末“参考”整块单独包一层,方便调小字号。
   body = body.replace(/(<h2[^>]*>参考<\/h2>[\s\S]*)$/, '<section class="refs">$1</section>')
@@ -75,7 +82,7 @@ for (const file of files) {
   const h1 = (md.match(/^#\s+(.+)$/m) || [, file.replace(/\.md$/, '')])[1].trim()
   // 完整 HTML5 文档,带 viewport,手机浏览器才按设备宽度渲染,不会横向滑动。
   const html = `<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>${h1}</title>\n<style>html { -webkit-text-size-adjust: 100%; } body { margin: 0; }</style>\n</head>\n<body>\n${section}\n</body>\n</html>\n`
-  const out = file.replace(/\.md$/, '.html')
+  const out = file === 'index.md' ? '00-overview.html' : file.replace(/\.md$/, '.html')
   fs.writeFileSync(path.join(outDir, out), html, 'utf8')
   built.push(out)
 }
