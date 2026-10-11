@@ -30,47 +30,73 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 
 症状和原因分开,诊断和修复也分开。这不是流程洁癖:一旦你把诊断和修复混在一次改动里,就没法判断这个修复是不是真的对着那个原因,也就失去了一次干净的对照。
 
-`runtime-forensics` 处理一个活着的症状:内存泄漏、空转的 CPU 占用、一个偶发的视觉 glitch。
+`runtime-forensics` 处理一个**活着的**症状:内存泄漏、空转的 CPU 占用、一个偶发的视觉 glitch。这类问题的特点是读源码读不出来:它取决于运行时状态、时序和真实负载。所以它的方法不是推理,是**插桩**。它的总纲是:**你拥有这份诊断。插桩那个活着的进程,不要从源码空想。**
 
-它从插桩得到诊断。它遍历运行中的进程,加日志和计数器,让程序自己把状态说出来,而不是靠读代码推测。一个具体的 prompt 长这样:
+它的步骤。
 
-```text
-/poteto-mode 这里有一个很慢的启动。告诉我时间花在哪,哪些源码行拥有那些时间。先不要修。
-```
+1. **在匹配的 surface 上捕获活信号。** 用一个真产物,不用猜测。空转的进程抓一份 CPU profile,内存泄漏抓一份 heap snapshot,视觉 glitch 抓一份 CDP trace。抓取通过对应的 control skill 完成。
+2. **把产物缩减到那枚冒烟的枪。** 对 CPU,是热路径上的那个函数;对泄漏,是从被泄漏对象到 GC root 的 retainer 链;对 glitch,那个在没有输入时仍在触发的循环。大产物交给 subagent 解析,主线程只留缩减后的发现。
+3. **在相信它之前,先证明那个机制。** 通过 CDP eval 给运行中的进程注入插桩,或者不重载就热修活代码,用很便宜的方式确认假设。这一步把"看起来是这里"变成"就是这里"。
+4. **把发现映射回源码。** 文件、符号、真正分配或调度的那一行。
+5. throughput checkpoint 保持一行:`throughput checkpoint: n/a, read-only forensics`。
 
-它的交付物是一份诊断,不是修复。这个边界很重要。诊断和修复混在一起,你就没法判断修复是不是真的对着测出来的原因。先拿到诊断,再单独开始一次修复。
+它交回一份被引用的诊断、捕获的信号、缩减后的发现、你怎么证明的机制、源码位置和产物路径。**没被要求就不修。** 等原因确定了,再交回给 bug-fix 或 perf-issue 去修。它和 `trace-forensics` 是一对:一个从活着的进程出发、插桩取证,一个从已经捕获好的产物出发。
 
 ## trace-forensics
 
-`trace-forensics` 处理一份事后交给你的 profiling 产物:cpuprofile、trace、spindump、heap snapshot。
+`trace-forensics` 处理一份**已经存在**的 profiling 产物:cpuprofile、trace、spindump、heap snapshot。它和 runtime-forensics 的区别在取证对象:那边你面对一个活着的进程,这边捕获已经完成,产物是一份固定的数据集。
 
-它的活是读那份产物,把热点帧映射回源码。它也在这一步划清边界:交付物是诊断。你给它的是一份已经捕获下来的东西,它告诉你时间花在哪,哪些源码行拥有那些时间。
+它的一句总纲:**你拥有从产物得到的诊断。加载它,整理成能查的形状,收敛到原因,归因到源码。** 既然是固定数据集,就读它,不要重跑它。工具还要保持通用,让这套流程换个环境也能用:DevTools 或 trace parser 读 cpuprofile 和 `.json.gz`,一个文本编辑器读 spindump,heap 工具读 heapsnapshot。
 
-它和 runtime-forensics 是一对。一个从活着的进程出发,一个从冷冻的产物出发。前提一样:先诊断,再修。
+它的六步。
+
+1. **认出格式,用对的工具加载。** 大产物交给 subagent 解析,主线程只留缩减后的发现。
+2. **把原始产物转换成能查询的形状。** 把 trace 或 heap snapshot dump 进 sqlite,一行一个样本、一帧、一个节点。先到"能查询",再开始读。
+3. **收敛到原因。** 查出占时间最多的帧,沿调用树走到热路径;泄漏就从被泄漏对象沿 retainer 链追到 GC root;spindump 就找出卡在 on-CPU 或被阻塞的那个线程,以及它等待的原因。
+4. **归因到源码。** 用产物自带的符号把热帧映射到文件、符号、行号。一个还没有源码映射的帧,不构成诊断:要么把符号解析出来,要么明说这份产物没有带符号。
+5. **有配对 capture 就对照确认。** 前后两份产物做 diff。**没有配对时,把发现标成"这份产物支持的最强假设",不是一个已确认的原因。**
+6. **交回一份带引用的诊断,没被要求就不修。** 原因确定后,路由到 bug-fix 或 perf-issue。throughput checkpoint 一行:`throughput checkpoint: n/a, read-only forensics`。
+
+它交回:产物和格式、缩减后的发现、源码位置、产物路径,以及配对 capture 有没有确认它。
 
 ## authoring-a-skill
 
 面向 agent 的散文就是行为。一句含糊的话,在这里不是让人皱眉,而是被某个未来的 agent 真的执行。所以它比人的文档门槛更高,也更值得当成一次有审查的正常改动。
 
-`authoring-a-skill` 是写或改一个 `SKILL.md` 的 playbook。
+`authoring-a-skill` 是写或改一个 `SKILL.md` 的 playbook。它的总纲很短:**你拥有这个 skill 的措辞。**
 
-它有一句判断前提值得记:面向 agent 的散文,比面向人的散文门槛更高。因为一句没用的话,在这里变成的是某个未来 agent 会真的去遵循的指令。人的文档里一句含糊的话只是让人皱眉,agent 的文档里一句含糊的话,是行为。
+它的步骤。
 
-它自己不放任你手写。它走 skill-authoring 的流程,校验 frontmatter 和链接,然后走 opening-a-pr。所以写一个 skill 也是一次有审查的正常改动,不是随手丢一个文件。这个约定本身,就是"skill 是基础设施"这个态度的体现。
+1. 用它所在的 harness 的 skill-authoring 流程:Cursor 里是内建的 **create-skill**,其他环境是 Anthropic 的 `skill-creator`;两者都没有,就按 agentskills.io 的 Agent Skills 格式来。
+2. **校验。** frontmatter 里有 `name` 和 `description`;被引用的文件真实存在;跨 skill 的链接解析得开。
+3. **结构性改动配测试用例**,主观改动跳过。
+4. 走 opening-a-pr。
 
-有一个特例它单独处理。如果一个 skill 的职责是驱动你的应用并证明行为,那它是一个验证 skill,应该走 `create-verification-skill` 和 `maintain-verification-skill`,而不是普通的手写流程。
+它给了一套很具体的写作规矩,本质上都是"能删就删":拿不准就删;只留会改变某个决定的散文;直接说让它做什么,跳过原因;只有某条规则不看解释就会让人困惑时,才加解释;语气和范围匹配;把结构性的来源(类型、README、配置)指出来,而不是重述一遍;用路径委派给别的 skill,不要复制;一个你反复遇到、还没被捕获的工作流,提成一个新 skill。
+
+它的回复:这个 skill 的摘要、关键设计决定、校验笔记。它还单独处理一种特例:如果一个 skill 的职责是驱动你的应用并证明行为,那它是验证 skill,应该走 `create-verification-skill` 和 `maintain-verification-skill`,而不是普通的手写流程。
 
 ## eval
 
 观察者效应:一个知道自己被评估的 agent,行为会不一样。所以测试必须是盲的,候选不能知道自己被观察、也不能知道彼此存在。而且判断要靠它实际读了哪些文件,不靠它自己声称读了什么。
 
-`eval` 测的是一个 skill、结构或 prompt 的改动会不会改变 agent 的行为,在它被推广之前。
+`eval` 测的是一个 skill、结构或 prompt 的改动会不会改变 agent 的行为,在它被推广之前。它的总纲:**你拥有这个实验的设计。规划、设盲、运行、综合。**
 
-它整个设计围绕一个失败模式:**观察者效应。** 一个知道自己正在被评估的 agent,行为会不一样。所以候选 agent 拿到的是一个看起来有机的任务,放在被清理过的目录里,永远不出现 "eval" 或 "candidate" 这些词,也永远不知道彼此存在。一个 judge 用中立的标签给所有输出打分。而"有没有跟着链条做",从每个候选**实际读了哪些文件**来评分,不是从它自己声称的。
+它有一套"盲"的硬规定,针对的正是上面那个失败模式:候选看到的任何目录、文件、prompt 里,都不许出现 `eval`、`test`、`judge`、`experiment`、`rubric`、`score`、`compare`、`benchmark`、`candidate`、`arena` 这些词;候选拿到的 prompt 要像一个真实的用户请求,只说目标、不说元信息;不许有任何"提示链条"的问法(比如问它用了哪些 skill、原则、文件),链条跟随要从代码形态去判,不从它的自述;目录和 slug 要清理成用户可能取的项目名;不告诉候选还有别的候选存在;judge 可以知道自己在评判,但只看打了匿名标签的输出、永远看不到模型名;比较两个变体时,一个 judge 在一趟里用同一把尺子给两组都打分,且不知道哪组来自哪。
 
-它有一条给你的规矩:接受判决之前,自己读一遍每一个输出。如果你不认同 judge,先怀疑 rubric,再怀疑自己的判断。
+它的步骤。
 
-这说明一个 skill 改动不是小事。一次 skill 编辑影响之后每一个会话,所以在它被信之前,要像对待一个实验那样对它。反过来说,它也是"改一个 skill 之前先测一下"这件事的可执行版本,而不是靠一次坏会话的直觉去改。
+1. **Frame。** 说清被测的变体是什么、什么行为算成功。把 rubric(三到六条具体标准)写给 judge 看,对候选取走。
+2. **搭清理过的环境。** 每个候选一个工作目录,变体装好,并把一个真实任务会有的上下文种进去(项目骨架、候选自然会读的 skill)。
+3. **写一个有机的 prompt。** 就是用户会打的那种,不泄露你在测什么。
+4. **并行起 N 个候选**,不同模型,每个在自己的清理目录里,拿到同一个 prompt。
+5. **起一个设盲的 judge**,用不同模型族,只看匿名标签和 rubric。
+6. **从 transcript 验证链条,不从自述。** 读每个候选在本地会话目录里的 transcript,看它实际打开了哪些文件,链条跟随从"真读了什么加代码形态"去判。
+7. **自己把每个候选输出读一遍。** 和 judge 的判决对比;不一致说明某个模型有偏见,或者 rubric 含糊。然后综合。
+
+它有一条给你的规矩:接受判决之前,自己读一遍每一个输出。如果你不认同 judge,先怀疑 rubric,再怀疑自己的判断。它的回复是:被测的变体、rubric、每个候选的笔记、judge 的判决、你的综合,以及要不要推广这个变体的建议。
+
+这说明一个 skill 改动不是小事。一次 skill 编辑影响之后每一个会话,所以在它被信之前,要像对待一个实验那样对它。
 
 ## 把五个连起来看
 
@@ -88,8 +114,8 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 
 这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
 
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)
+- [`investigation`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
+- [`runtime-forensics`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
+- [`trace-forensics`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
+- [`authoring-a-skill`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
+- [`eval`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)

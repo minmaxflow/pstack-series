@@ -168,10 +168,10 @@ PR 是给一个人一分钟读完的 briefing,不是实验记录。它要让手�
 
 这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
 
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/opening-a-pr.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/babysit.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/shipping.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autonomous-run.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-full.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-stack.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/orchestrate.md)
+- [`opening-a-pr`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/opening-a-pr.md)
+- [`babysit`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/babysit.md)
+- [`shipping`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/shipping.md)
+- [`autonomous-run`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autonomous-run.md)
+- [`autopilot-full`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-full.md)
+- [`autopilot-stack`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-stack.md)
+- [`orchestrate`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/orchestrate.md)

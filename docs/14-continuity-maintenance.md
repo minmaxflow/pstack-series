@@ -86,7 +86,7 @@
 
 这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
 
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)
+- [`session-pickup`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
+- [`pause-safely`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
+- [`multi-phase-plan`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
+- [`worktree-cleanup`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)

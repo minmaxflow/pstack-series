@@ -167,10 +167,10 @@
 
 这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
 
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/feature.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/refactoring.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/bug-fix.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/perf-issue.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/hillclimb.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/prototype.md)
-- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/visual-parity.md)
+- [`feature`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/feature.md)
+- [`refactoring`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/refactoring.md)
+- [`bug-fix`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/bug-fix.md)
+- [`perf-issue`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/perf-issue.md)
+- [`hillclimb`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/hillclimb.md)
+- [`prototype`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/prototype.md)
+- [`visual-parity`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/visual-parity.md)

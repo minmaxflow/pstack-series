@@ -66,15 +66,17 @@ subagent 默认是**全新的**。新工作给一个新 subagent,带一份合并
 
 ## 写回复的规矩
 
-回复本身也是产物,所以有规矩:短句,一句一个意思,句号结尾。不用破折号。冒号不能当句中的连接词。但**简短不是丢掉内容的借口**:playbook 要求的每个部分(细节、权衡、选择、开着的决定)都要在。内容要先为消费者和维护者框定影响,再谈实现细节。**绝不编造链接或引用。** 每一条声明都要在**同一句**里带上它的证据或它的标签(测得的、推断的、还是猜的)。
+回复本身也是产物,而且是**给人看的那一个产物**。所以有规矩:短句,一句一个意思,句号结尾。不用破折号。冒号不能当句中的连接词。但**简短不是丢掉内容的借口**:playbook 要求的每个部分(细节、权衡、选择、开着的决定)都要在。内容要先为消费者和维护者框定影响,再谈实现细节。
+
+还有两条在防"看起来可信":**绝不编造链接或引用**(只链本次真的产出或读过的);每一条声明都要在**同一句**里带上它的证据或它的标签(测得的、推断的、还是猜的)。这两条的目标是让读者不用相信你、也不用自己重跑一遍,就能判断每句话的分量。
 
 ## 注释
 
-注释和回复同规矩:写得干净,而不是先写脏再清。一条注释只有在解释代码说不出来的 why 时才保留。验证脚本和测试脚本**没有**叙述阶段的注释,比如 `// Phase 1: add cards`;断言或日志字符串本身就记录了那一步。
+注释和回复同规矩:写得干净,而不是先写脏再清。它的理由是注释会腐烂,而且大多在重复代码已经说清的事;一条注释只有在解释代码说不出来的 why 时才值得留。验证脚本和测试脚本**没有**叙述阶段的注释,比如 `// Phase 1: add cards`;断言或日志字符串本身就记录了那一步。这条规矩覆盖它产出的每一个文件,包括它委派出去的 agent 的 diff。而"作者会替自己辩护"这件事,让注释的清理归到另一趟里做(`no-comments`),不归写它的人。
 
 ## 跨 harness
 
-它是在 Cursor 上写的,但它用一节 Harness 把 Cursor 的东西映射到别的 harness:subagent 工具的名字、`poteto-agent` 不在时怎么替代、模型设置文件在哪、transcript 目录在哪、skill 文件夹在哪、结构化提问工具叫什么,以及 pstack 没有带的东西(`create-skill`、`deslop`、`control-cli/control-ui`、`/loop`)在没有时怎么用别的办法顶上。一个不在 Cursor 上跑的 pstack,靠的就是这一节。
+它是在 Cursor 上写的,但一份配置解决不了移植。所以它用一节 Harness 把 Cursor 的每个具体件映射到别的 harness:subagent 工具的名字、`poteto-agent` 不在时怎么用一个通用 subagent 替代、模型设置文件写在哪、transcript 目录在哪、skill 文件夹在哪、结构化提问工具叫什么。它还点明 pstack 没有带但会引用到的东西(`create-skill`、`deslop`、`control-cli/control-ui`、`/loop`),以及在没有它们时怎么用别的办法顶上。这一节是 pstack 能真的跑在 Cursor 之外的原因。
 
 ## 构造自下而上,执行自上而下
 
@@ -115,7 +117,7 @@ flowchart LR
 
 ## 边界
 
-调度器是一个**默认入口**,不是强制。任何 skill 你都可以直接调。它的存在,是在你没有明确偏好时替你选和排。当你想覆盖某个具体选择时,点一个 skill 的名字就行。这也是为什么它要求你说目标、别枚举 skill:它已经带着一张比你临时手写更全的地图。
+调度器是一个**默认入口**,不是强制。任何 skill 你都可以直接调;它的存在,是在你没有明确偏好时替你选和排。当你想覆盖某个具体选择时,点一个 skill 的名字就行。这也解释了它为什么要求你说目标、别枚举 skill:它已经带着一张比你临时手写更全的地图,而手写的序列通常会重排或漏掉那张地图里的步骤。
 
 ## 今天就做一件事
 
@@ -126,5 +128,5 @@ flowchart LR
 这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
 
 - [`poteto-mode`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md)
-- [`agents`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
-- [`agents`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)
+- [`poteto-agent`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
+- [`comment-sicko`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)
