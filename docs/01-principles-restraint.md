@@ -1,14 +1,8 @@
-# pstack 拆解 01 · 决定与克制
+# pstack 拆解 01 · 少即是多(上)
 
-你让 agent 给一个命令加一个 `--json` 开关。
+AI coding 之后,代码的产出量第一次超过了人能读完的速度。于是"多写"不再是美德,而是一种负债:每多一个概念、一层抽象、一个必须保持同步的状态,都是以后每一次阅读、以及让 agent 继续改的时候,要重新付出的成本。
 
-它新建了一个 `JsonFormatter` 类、一个 `Formatter` 接口、一个工厂函数,把 `format` 参数穿过六个函数,顺手加了一个配置项。diff 有 400 行。评审花掉一个小时。两周后,有人发现文本输出被改坏了。
-
-这一次,agent 每一步都没做错。它只是默认了一个动作:把能力加上去。没有人问过,这件事需要多少工。
-
-这一篇的五条原则回答同一个问题:**这次改动该有多大。**
-
-它们不是五条并列的规矩,是一条链:默认不做,做也先减,用读者的负担衡量少,需求变了就重画,迁移朝终态收敛。
+这一篇讲三条关于"少"的原则:默认能删就删,加之前先减,以及用读者的负担而不是行数来衡量。
 
 ## laziness-protocol
 
@@ -80,76 +74,6 @@
 
 检验很干净:**一个新读者能不能在半分钟里回答两个问题,X 从哪来,什么能改 X。**
 
-## redesign-from-first-principles
-
-从第一性重画的背后是一个诊断:**系统往往不是被一次错误的设计毁掉的,而是被一百个各自合理的小补丁。** 每贴一块补丁,系统里就多住进一套局部逻辑:新的需求一套,原来的设计一套。补丁本身都没错,错的是它们让系统失去了"一个心智模型"这件事。所以整合新需求时,要维护的是设计的一致性,不是现状的延续性。"假设这个需求第一天就在,我会怎么建",是把设计重新拉回到一个模型上的办法。
-
-它问的问题只有一句:如果我们是带着这个新需求从零开始写,会建出什么。
-
-有个常见的例子。状态本来是个枚举,你要加一个"已归档"。贴的做法是加一个 `isArchived` 布尔,和原来的 `status` 并存。重画的做法是把它加进枚举本身。第一种两分钟写完,之后每个人都要问这两个字段谁优先。
-
-它落到动作上是四步。
-
-**先读全。** 把所有受影响的文件读完,先理解现在的设计是什么样,才谈得上重画。
-
-**问那一句。** 如果从零写、带着这个需求,我会建出什么。
-
-**让改动穿透。** 类型、文档、示例、设计理由,一个引用都不漏。漏掉的地方以后会以不一致的形式长回来。
-
-**想完再分步交。** 先在脑子里完成整个重画,再把它拆成增量交付。不要一边想一边改。
-
-它同时保住了未来的选择权。设计没有被补丁化,以后想换方向,路都还在。
-
-## outcome-oriented-execution
-
-朝终态执行的背后是一个关于债的判断:迁移和重写里最贵的代码,不是目标代码,是过渡代码。为了让每一步都不断档,你会写兼容层、双写、临时开关;它们本应该只活几次提交,却常常活成永久设施,因为没有人记得它们是临时的,而删掉又怕出事。所以优化的对象应该是终态:让系统朝一个可验证的终点收敛,允许中间态在计划内、有范围、可回退地坏一段。这需要先声明哪些破损是可接受的,再用一次完整验证收尾。
-
-理由是:让每一个中间步骤都完全稳定,往往会产生临时兼容代码,而临时兼容代码会活成长期债。
-
-一个具体的场景。把同步 store 迁到异步,为了不破坏现有调用方,你留了一层同步适配器。迁移宣布完成了,适配器还在,因为已经没人记得它是临时的。
-
-它有个前提,别用错地方。它只适用于有明确阶段边界的计划性重写和迁移,不是随便一个改动都可以中途弄坏。
-
-在满足前提时,它的规则是这些。
-
-**终态完整性优先。** 目标架构是对的,比每一步都平滑更重要。
-
-**先声明哪里可以坏。** 把临时破损的范围明确写出来,计划内、范围清楚、可以回退,这三条同时成立才算数。
-
-**迁移期间保住高信号检查。** 对正在动的区域保留能报警的检查,别在过渡期把安全网撤了。
-
-**完成时做完整验证。** 计划收尾时,做一次完整的静态和运行时验证,确保终态真的对。
-
-检验方式:数一数这次迁移里有多少代码只为过渡存在,每一项都应该有一个删除日期。
-
-## 把五条连起来看
-
-这五条有先后。
-
-先有"默认不做",才有"做也先减"这个排序问题。minimize-reader-load 给"少"定了单位,后面两条才有判据:重画的价值,在于把读者负担从两套逻辑降到一套。redesign 和 outcome-oriented 是同一个想法在两个尺度上,一个处理需求集成,一个处理迁移,都在拒绝补丁式共存。
-
-但这不是说越小越好。build-the-lever 会让一次性的活也造个工具,因为工具是可被复跑的产物。exhaust-the-design-space 会让你故意建两三个原型。可检验性,或者没有先例,这两件事一出现,克制就让位。这是下一篇的主题。
-
-还有一道更细的边界。minimize-reader-load 服务的是下一个读者,experience-first 服务的是使用者。两者都在优化别人的代价,但对象不同,别互相套用。
-
-这几个名字在仓库里是活的接口。refactoring 拿 laziness 定最小改动的门槛,拿 minimize-reader-load 做验收。arena 打平时用 laziness 选边界更干净的那个。architect 推翻草图时先 subtract,再 redesign。attack-the-premise 在反复失败时选择移除不对称,而不是加一层补偿。
-
-## 今天就做的一件事
-
-动手前,先把这段发给 agent。
-
-```
-先别写。列出这次改动会新增的文件和抽象,每个写明谁会用它,以及你打算删掉什么。没有第二个使用者的抽象先不建。
-```
-
-写完再看三件事。
-
-1. diff 里删掉了几行。零删除的改动,先解释为什么。
-2. 从新入口到答案隔着几层。超过三层就拍平。
-3. 有没有代码只为过渡存在。给每一项一个删除日期。
-
-下一篇讲 Core 的另一半:先定数据结构,为体验而建,没先例就造原型,把工作做成杠杆,以及反复失败时质疑前提。
-
 ## 参考
 
 本篇拆解对照的原文,都在 pstack 上游仓库里(`github.com/cursor/plugins/tree/main/pstack`):
@@ -157,5 +81,3 @@
 - [`skills/principle-laziness-protocol/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-laziness-protocol/SKILL.md)
 - [`skills/principle-subtract-before-you-add/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-subtract-before-you-add/SKILL.md)
 - [`skills/principle-minimize-reader-load/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-minimize-reader-load/SKILL.md)
-- [`skills/principle-redesign-from-first-principles/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-redesign-from-first-principles/SKILL.md)
-- [`skills/principle-outcome-oriented-execution/SKILL.md`](https://github.com/cursor/plugins/blob/main/pstack/skills/principle-outcome-oriented-execution/SKILL.md)
