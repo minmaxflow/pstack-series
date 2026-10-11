@@ -1,4 +1,4 @@
-# 07 · 设计与对抗
+# pstack 拆解 07 · 设计与对抗
 
 一次尝试,会锁死模型想到的第一个形状。
 
@@ -125,11 +125,11 @@
 
 面对一个没有先例、又难以反悔的设计,先做两三个**结构上不同**的原型,再选。注意是结构上不同,同一个思路的两种写法不算,那只是确认你已经想到的东西。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`architect`](https://github.com/backnotprop/pstack/blob/main/skills/architect/SKILL.md)
-- [`arena`](https://github.com/backnotprop/pstack/blob/main/skills/arena/SKILL.md)
-- [`swarm`](https://github.com/backnotprop/pstack/blob/main/skills/swarm/SKILL.md)
-- [`interrogate`](https://github.com/backnotprop/pstack/blob/main/skills/interrogate/SKILL.md)
+- [`skills/architect/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/architect/SKILL.md)
+- [`skills/arena/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/arena/SKILL.md)
+- [`skills/swarm/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/swarm/SKILL.md)
+- [`skills/interrogate/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/interrogate/SKILL.md)

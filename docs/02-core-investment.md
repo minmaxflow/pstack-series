@@ -1,4 +1,4 @@
-# 02 · 基础、体验与探索
+# pstack 拆解 02 · 基础、体验与探索
 
 你把旧 API 手工迁到新 API。三百个文件,改了两天。合并上游改动时冲突了一轮,又重改一遍。改动本身没错,错在它是手工做的,而手工做的改动只能靠手工复核。
 
@@ -132,12 +132,12 @@ experience-first 和 foundational-thinking 是一对。原文说得很清楚,基
 
 下一篇讲 Architecture:把领域装进结构里,把校验关在边界上,让非法状态无法表达,让操作可以重跑,以及在并发下先消除共享。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`principle-foundational-thinking`](https://github.com/backnotprop/pstack/blob/main/skills/principle-foundational-thinking/SKILL.md)
-- [`principle-experience-first`](https://github.com/backnotprop/pstack/blob/main/skills/principle-experience-first/SKILL.md)
-- [`principle-exhaust-the-design-space`](https://github.com/backnotprop/pstack/blob/main/skills/principle-exhaust-the-design-space/SKILL.md)
-- [`principle-build-the-lever`](https://github.com/backnotprop/pstack/blob/main/skills/principle-build-the-lever/SKILL.md)
-- [`principle-attack-the-premise`](https://github.com/backnotprop/pstack/blob/main/skills/principle-attack-the-premise/SKILL.md)
+- [`skills/principle-foundational-thinking/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-foundational-thinking/SKILL.md)
+- [`skills/principle-experience-first/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-experience-first/SKILL.md)
+- [`skills/principle-exhaust-the-design-space/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-exhaust-the-design-space/SKILL.md)
+- [`skills/principle-build-the-lever/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-build-the-lever/SKILL.md)
+- [`skills/principle-attack-the-premise/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-attack-the-premise/SKILL.md)

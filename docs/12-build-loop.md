@@ -1,6 +1,8 @@
-# 12 · 构建循环
+# pstack 拆解 12 · 构建循环
 
-这一篇是"构建"这一大类的 playbook。构建的难点通常不在写代码,而在你对自己在做什么有多清醒:是复现一个已知缺陷,还是加一个新行为;是在重构还是在修 bug。姿态一错,后面的标准全错。所以每条 playbook 都逼你先把两件事说清楚:我观察到了什么,以及怎么算做完。
+你让 agent 加个功能。它写得很快,测试也过了,两周后你却发现它从一开始就抓错了数据形状。
+
+构建的难点通常不在写代码,而在你对自己在做什么有多清醒:是复现一个已知缺陷,还是加一个新行为;是在重构还是在修 bug。姿态一错,后面的标准全错。所以每条 playbook 都逼你先把两件事说清楚:我观察到了什么,以及怎么算做完。
 
 它们共享一条纪律:**说清你观察到了什么,然后让 playbook 去要证据。**
 
@@ -163,14 +165,14 @@
 
 下一次构建,先把两句话写清楚,再开始。一句是"我观察到了什么",一句是"done 怎么检查"。这两句就是路由信号,也是 playbook 愿意为你要证据的前提。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`feature`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/feature.md)
-- [`refactoring`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/refactoring.md)
-- [`bug-fix`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/bug-fix.md)
-- [`perf-issue`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/perf-issue.md)
-- [`hillclimb`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/hillclimb.md)
-- [`prototype`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/prototype.md)
-- [`visual-parity`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/visual-parity.md)
+- [`skills/poteto-mode/playbooks/feature.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/feature.md)
+- [`skills/poteto-mode/playbooks/refactoring.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/refactoring.md)
+- [`skills/poteto-mode/playbooks/bug-fix.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/bug-fix.md)
+- [`skills/poteto-mode/playbooks/perf-issue.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/perf-issue.md)
+- [`skills/poteto-mode/playbooks/hillclimb.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/hillclimb.md)
+- [`skills/poteto-mode/playbooks/prototype.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/prototype.md)
+- [`skills/poteto-mode/playbooks/visual-parity.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/visual-parity.md)

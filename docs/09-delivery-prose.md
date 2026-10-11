@@ -1,4 +1,4 @@
-# 09 · 交付与文体
+# pstack 拆解 09 · 交付与文体
 
 代码写完不等于可以交付。这一组四个 skill 管的是产物读起来像不像人做的。它们照看四类东西:散文、文档、注释,以及具体语言里的写法规则。
 
@@ -149,11 +149,11 @@
 
 提交之前,分三样东西清。代码走 `deslop`,散文走 `unslop`,注释交给一个没写它的 reviewer。三件事指向同一个结论:让不在这段代码里投入过感情的人来看一遍。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`unslop`](https://github.com/backnotprop/pstack/blob/main/skills/unslop/SKILL.md)
-- [`technical-writing`](https://github.com/backnotprop/pstack/blob/main/skills/technical-writing/SKILL.md)
-- [`no-comments`](https://github.com/backnotprop/pstack/blob/main/skills/no-comments/SKILL.md)
-- [`typescript-best-practices`](https://github.com/backnotprop/pstack/blob/main/skills/typescript-best-practices/SKILL.md)
+- [`skills/unslop/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/unslop/SKILL.md)
+- [`skills/technical-writing/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/technical-writing/SKILL.md)
+- [`skills/no-comments/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/no-comments/SKILL.md)
+- [`skills/typescript-best-practices/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/typescript-best-practices/SKILL.md)

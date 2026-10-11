@@ -1,8 +1,8 @@
-# 15 · poteto-mode 与运行时
+# pstack 拆解 15 · poteto-mode 与运行时
 
-前面三层是静态的。poteto-mode 是调度器,它把原则、skill、playbook 组合成一个**运行时**。
+你敲了一句话,没有指定任何 skill。然后 todo list 自动长出了十几条步骤,最后交回一段带证据的回复。
 
-这一篇回答一个具体的问题:你敲了一句话,没有指定任何 skill,todo list 自动长出了十几条步骤,最后交回一段带证据的回复。中间发生了什么。
+中间发生了什么?前面三层是静态的,poteto-mode 是那个把它们组合成**运行时**的调度器。
 
 ## poteto-mode 是什么
 
@@ -123,10 +123,10 @@ flowchart LR
 
 下一次你敲 `poteto-mode`,先别急着看它做了什么,先看 todo list 的**前几条**。那几条就是它替你选的那个程序。读它们,你就知道这次它会走一条什么样的路。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`poteto-mode`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md)
-- [`poteto-agent`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
-- [`comment-sicko`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)
+- [`skills/poteto-mode/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md)
+- [`agents/poteto-agent.md`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
+- [`agents/comment-sicko.md`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)

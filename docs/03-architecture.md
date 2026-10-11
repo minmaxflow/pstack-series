@@ -1,4 +1,4 @@
-# 03 · Architecture
+# pstack 拆解 03 · Architecture
 
 系统里有一条规则:订单一旦发货,就不能再改收货地址。
 
@@ -141,13 +141,13 @@ model-the-domain 是更上面的一层。它先选整体形状,后面几条都�
 
 下一篇是 Part I 的铰链:什么才算证明。它也是整个 pstack 的承重柱。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`principle-model-the-domain`](https://github.com/backnotprop/pstack/blob/main/skills/principle-model-the-domain/SKILL.md)
-- [`principle-boundary-discipline`](https://github.com/backnotprop/pstack/blob/main/skills/principle-boundary-discipline/SKILL.md)
-- [`principle-type-system-discipline`](https://github.com/backnotprop/pstack/blob/main/skills/principle-type-system-discipline/SKILL.md)
-- [`principle-make-operations-idempotent`](https://github.com/backnotprop/pstack/blob/main/skills/principle-make-operations-idempotent/SKILL.md)
-- [`principle-migrate-callers-then-delete-legacy-apis`](https://github.com/backnotprop/pstack/blob/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md)
-- [`principle-separate-before-serializing-shared-state`](https://github.com/backnotprop/pstack/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md)
+- [`skills/principle-model-the-domain/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-model-the-domain/SKILL.md)
+- [`skills/principle-boundary-discipline/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-boundary-discipline/SKILL.md)
+- [`skills/principle-type-system-discipline/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-type-system-discipline/SKILL.md)
+- [`skills/principle-make-operations-idempotent/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-make-operations-idempotent/SKILL.md)
+- [`skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md)
+- [`skills/principle-separate-before-serializing-shared-state/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md)

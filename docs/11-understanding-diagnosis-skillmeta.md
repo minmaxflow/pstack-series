@@ -1,10 +1,10 @@
-# 11 · 理解、诊断与技能元
+# pstack 拆解 11 · 理解、诊断与技能元
 
-Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,带一个任务形状、一串步骤、一份证据契约,还有一份完成和回复的契约。
+一个 agent 报了个 bug,顺手就开始改。改到一半你才发现,它连问题的成因都判断错了。
 
-它有一个很具体的执行约定:匹配上一个 playbook 时,poteto-mode 会把这个 playbook 的步骤**原样拷贝**进 todo list。一个你决定不做的步骤,不删除,留在列表里,标一条 `skip: <原因>`。所以你永远能看到它选择不做什么。
+这一篇的五个 playbook 有个共同点:**交付物是答案、诊断或一次被验证过的 skill 改动,不是代码。** 它们要防的,就是这种"手比脑子快"。
 
-这一篇的五个 playbook 有个共同点:**交付物是答案、诊断或一次被验证过的 skill 改动,不是代码。** 它们背后的想法是:探索、诊断、修复、评估是四种不同的认知姿态,混在一起会互相污染。它们的价值,是防止"手比脑子快"。
+它们还共享一个很具体的执行约定:匹配上一个 playbook 时,poteto-mode 会把它的步骤**原样拷贝**进 todo list,一个你决定不做的步骤不删除,留在列表里标一条 `skip: <原因>`,所以你永远能看到它选择不做什么。
 
 ## investigation
 
@@ -110,12 +110,12 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 
 下次碰到一个"这是怎么回事"的问题,先走 `investigation`,让 agent 只给发现,不给修复。等发现指向一个确切的原因,再开一次新的任务去修它。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`investigation`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
-- [`runtime-forensics`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
-- [`trace-forensics`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
-- [`authoring-a-skill`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
-- [`eval`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)
+- [`skills/poteto-mode/playbooks/investigation.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
+- [`skills/poteto-mode/playbooks/runtime-forensics.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
+- [`skills/poteto-mode/playbooks/trace-forensics.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
+- [`skills/poteto-mode/playbooks/authoring-a-skill.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
+- [`skills/poteto-mode/playbooks/eval.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)

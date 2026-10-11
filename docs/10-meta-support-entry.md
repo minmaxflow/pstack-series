@@ -1,4 +1,4 @@
-# 10 · 元、支撑与入口
+# pstack 拆解 10 · 元、支撑与入口
 
 这一组九个 skill 是系统的外围器官。它们不直接干活,它们让系统自己变好、自己可审计、自己可配置、自己可被引导。
 
@@ -156,16 +156,16 @@
 
 在你的仓库里跑一次 `correct`,选一个你已经纠正过两次的错误类。看看能不能把它从"写在 prompt 里的一句话"升级成一个"跳过了就会失败"的结构。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`correct`](https://github.com/backnotprop/pstack/blob/main/skills/correct/SKILL.md)
-- [`reflect`](https://github.com/backnotprop/pstack/blob/main/skills/reflect/SKILL.md)
-- [`automate-me`](https://github.com/backnotprop/pstack/blob/main/skills/automate-me/SKILL.md)
-- [`show-me-your-work`](https://github.com/backnotprop/pstack/blob/main/skills/show-me-your-work/SKILL.md)
-- [`figure-it-out`](https://github.com/backnotprop/pstack/blob/main/skills/figure-it-out/SKILL.md)
-- [`setup-pstack`](https://github.com/backnotprop/pstack/blob/main/skills/setup-pstack/SKILL.md)
-- [`poteto-help`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-help/SKILL.md)
-- [`bro`](https://github.com/backnotprop/pstack/blob/main/skills/bro/SKILL.md)
-- [`make-bot-ui`](https://github.com/backnotprop/pstack/blob/main/skills/make-bot-ui/SKILL.md)
+- [`skills/correct/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/correct/SKILL.md)
+- [`skills/reflect/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/reflect/SKILL.md)
+- [`skills/automate-me/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/automate-me/SKILL.md)
+- [`skills/show-me-your-work/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/show-me-your-work/SKILL.md)
+- [`skills/figure-it-out/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/figure-it-out/SKILL.md)
+- [`skills/setup-pstack/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/setup-pstack/SKILL.md)
+- [`skills/poteto-help/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-help/SKILL.md)
+- [`skills/bro/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/bro/SKILL.md)
+- [`skills/make-bot-ui/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/make-bot-ui/SKILL.md)

@@ -1,4 +1,4 @@
-# 01 · 决定与克制
+# pstack 拆解 01 · 决定与克制
 
 你让 agent 给一个命令加一个 `--json` 开关。
 
@@ -150,12 +150,12 @@
 
 下一篇讲 Core 的另一半:先定数据结构,为体验而建,没先例就造原型,把工作做成杠杆,以及反复失败时质疑前提。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`principle-laziness-protocol`](https://github.com/backnotprop/pstack/blob/main/skills/principle-laziness-protocol/SKILL.md)
-- [`principle-subtract-before-you-add`](https://github.com/backnotprop/pstack/blob/main/skills/principle-subtract-before-you-add/SKILL.md)
-- [`principle-minimize-reader-load`](https://github.com/backnotprop/pstack/blob/main/skills/principle-minimize-reader-load/SKILL.md)
-- [`principle-redesign-from-first-principles`](https://github.com/backnotprop/pstack/blob/main/skills/principle-redesign-from-first-principles/SKILL.md)
-- [`principle-outcome-oriented-execution`](https://github.com/backnotprop/pstack/blob/main/skills/principle-outcome-oriented-execution/SKILL.md)
+- [`skills/principle-laziness-protocol/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-laziness-protocol/SKILL.md)
+- [`skills/principle-subtract-before-you-add/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-subtract-before-you-add/SKILL.md)
+- [`skills/principle-minimize-reader-load/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-minimize-reader-load/SKILL.md)
+- [`skills/principle-redesign-from-first-principles/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-redesign-from-first-principles/SKILL.md)
+- [`skills/principle-outcome-oriented-execution/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-outcome-oriented-execution/SKILL.md)

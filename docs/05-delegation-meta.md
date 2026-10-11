@@ -1,6 +1,8 @@
-# 05 · Delegation & Meta
+# pstack 拆解 05 · Delegation & Meta
 
-一个人能同时推进的事情是有限的。一个团队能同时教一个 agent 的事情也是有限的。这一篇的三条原则处理这两个上限。
+你手上同时开着三个 agent。一个在改 bug,一个在补测试,一个在迁移一个老模块。半小时后你回来,发现三个都卡在同一件事上:等你点一下许可。
+
+一个人能同时推进的事情是有限的,一个团队能同时教一个 agent 的事情也是有限的。这一篇的三条原则处理这两个上限。
 
 前两条把上限从单个会话、单个人身上移开:一条管 agent 的记性,一条管人的带宽。第三条让系统自己变好,而不是靠同一个人反复教同一件事。它们不针对某一次任务,它们决定了这套东西能不能长期用下去。
 
@@ -72,10 +74,10 @@ guard-the-context-window 和 never-block-on-the-human 把上限从单个会话�
 
 到这里,Part I 结束。原则层讲完了。你现在手里有 24 个名字,它们是一套共享的词汇,也是后面整台机器引用的底层接口。接下来 Part II 讲这些名字被组织成了什么。第一站是能力层,skills。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`principle-guard-the-context-window`](https://github.com/backnotprop/pstack/blob/main/skills/principle-guard-the-context-window/SKILL.md)
-- [`principle-never-block-on-the-human`](https://github.com/backnotprop/pstack/blob/main/skills/principle-never-block-on-the-human/SKILL.md)
-- [`principle-encode-lessons-in-structure`](https://github.com/backnotprop/pstack/blob/main/skills/principle-encode-lessons-in-structure/SKILL.md)
+- [`skills/principle-guard-the-context-window/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-guard-the-context-window/SKILL.md)
+- [`skills/principle-never-block-on-the-human/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-never-block-on-the-human/SKILL.md)
+- [`skills/principle-encode-lessons-in-structure/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/principle-encode-lessons-in-structure/SKILL.md)

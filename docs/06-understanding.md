@@ -1,10 +1,8 @@
-# 06 · 理解
+# pstack 拆解 06 · 理解
 
-Part II 讲的是 skill。一个 skill 是一种**具名的能力**:它由若干原则组合而成,带一个明确的触发条件、一个固定的输出形态、一份契约。原则告诉你"什么时候该做什么",skill 告诉你"这件事具体怎么跑一遍"。
+你让 agent 改一段你不熟的代码。它很快改完了,而且第一眼看起来还挺合理。两周后你才发现,它修的是症状不是原因,而它当时连这段代码在系统里是干什么的都没搞清。
 
-这一组 skill 处理信息问题。agent 失败通常只有两种方式:它误解了你要什么,或者它没有足够的上下文把事做对。第一种靠 prompt 解决,第二种靠这一组。
-
-开篇那句可以说得很直:你不理解的代码,改它就等着出微妙的回归。这对 agent 和对人一样成立。一个没有追踪过模型的 agent,会在第一个看起来合理的地方修症状。
+agent 失败通常只有两种方式:它误解了你要什么,或者它没有足够的上下文把事做对。第一种靠 prompt 解决,第二种靠这一组 skill。它们处理的是同一件事:在动手之前,先把系统装进脑子。一个没有追踪过模型的 agent,会在第一个看起来合理的地方修症状。
 
 ## how
 
@@ -252,12 +250,12 @@ Slack 是一把双刃剑。它经常是**真正的决定发生的地方**,尤其
 
 挑一段你觉得"为什么是这样"的代码,跑一次 `why`,然后把它的"我们不知道什么"那一节读完。如果你发现那一节是空的,或者全是没根据的确定语气,你正好看到了这个 skill 防的是什么。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`how`](https://github.com/backnotprop/pstack/blob/main/skills/how/SKILL.md)
-- [`why`](https://github.com/backnotprop/pstack/blob/main/skills/why/SKILL.md)
-- [`teach`](https://github.com/backnotprop/pstack/blob/main/skills/teach/SKILL.md)
-- [`recall`](https://github.com/backnotprop/pstack/blob/main/skills/recall/SKILL.md)
-- [`blast-radius`](https://github.com/backnotprop/pstack/blob/main/skills/blast-radius/SKILL.md)
+- [`skills/how/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/how/SKILL.md)
+- [`skills/why/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/why/SKILL.md)
+- [`skills/teach/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/teach/SKILL.md)
+- [`skills/recall/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/recall/SKILL.md)
+- [`skills/blast-radius/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/blast-radius/SKILL.md)

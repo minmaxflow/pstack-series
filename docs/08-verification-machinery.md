@@ -1,8 +1,8 @@
-# 08 · 验证机械
+# pstack 拆解 08 · 验证机械
 
-第 04 篇讲的是"什么算证明"。这一组四个 skill 是把那句话变成可以跑的工具。
+你问 agent 验证过了吗,它说验证过了。你再问怎么验证的,它说跑了一遍测试。
 
-你问 agent 验证过了吗,它说验证过了。你再问怎么验证的,它说跑了一遍测试。问题就在这句话里。跑测试,和证明应用行为,不是一回事。
+问题就在这句话里:跑测试,和证明应用行为,不是一回事。这一组四个 skill,就是把"什么算证明"变成可以跑的工具。
 
 ## tdd
 
@@ -143,11 +143,11 @@
 
 如果你的项目还没有一个能在应用里自证的项目本地 skill,先建一个。这是 setup 里回报最高的一笔投入,没有之一。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`tdd`](https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md)
-- [`benchmark-checklist`](https://github.com/backnotprop/pstack/blob/main/skills/benchmark-checklist/SKILL.md)
-- [`create-verification-skill`](https://github.com/backnotprop/pstack/blob/main/skills/create-verification-skill/SKILL.md)
-- [`maintain-verification-skill`](https://github.com/backnotprop/pstack/blob/main/skills/maintain-verification-skill/SKILL.md)
+- [`skills/tdd/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md)
+- [`skills/benchmark-checklist/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/benchmark-checklist/SKILL.md)
+- [`skills/create-verification-skill/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/create-verification-skill/SKILL.md)
+- [`skills/maintain-verification-skill/SKILL.md`](https://github.com/backnotprop/pstack/blob/main/skills/maintain-verification-skill/SKILL.md)

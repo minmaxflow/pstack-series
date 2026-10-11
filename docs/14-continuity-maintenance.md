@@ -1,8 +1,8 @@
-# 14 · 连续性与维护
+# pstack 拆解 14 · 连续性与维护
 
-这一组处理的是"时间"。工作很少在一次会话里干净地开始和结束。它会被打断,被接手,被分成很多阶段,事后还会留下一堆需要清理的东西。
+昨天你让 agent 做了一半的活。今天换了个会话,你说"接着做"。它从零开始,把昨天已经做完的部分又做了一遍。
 
-它背后的想法是:工作会跨会话、跨时间、跨机器,所以"接续"和"退场"不是意外,是系统的一等公民。一个不能被安全中断的系统,你就不敢让它跑长;一个不清理战场的系统,铺开几次就会把自己拖垮。把这两件事各给一套明确流程,是长时间运行的前提,而不是事后补救。
+这一组处理的正是"时间":工作很少在一次会话里干净地开始和结束,它会被打断,被接手,被分成很多阶段,事后还会留下一堆需要清理的东西。它背后的想法是:工作会跨会话、跨时间、跨机器,所以"接续"和"退场"不是意外,是系统的一等公民。一个不能被安全中断的系统,你就不敢让它跑长;一个不清理战场的系统,铺开几次就会把自己拖垮。把这两件事各给一套明确流程,是长时间运行的前提,而不是事后补救。
 
 四个 playbook,两两成对。`session-pickup` 和 `pause-safely` 是一对,一个接续,一个挂起。`multi-phase-plan` 和 `worktree-cleanup` 是一对,一个规划长工作,一个回收它留下的东西。
 
@@ -82,11 +82,11 @@
 
 如果你今天要下线,而手上有在飞的活,别只是关掉。让 agent 走一次 pause,提交 checkpoint,写一份 resume note。明天你会感谢今天这五分钟。
 
-## 读原文
+## 参考
 
-这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+本篇拆解对照的原文,都在 pstack 仓库里(仓库地址 `github.com/backnotprop/pstack`):
 
-- [`session-pickup`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
-- [`pause-safely`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
-- [`multi-phase-plan`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
-- [`worktree-cleanup`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)
+- [`skills/poteto-mode/playbooks/session-pickup.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
+- [`skills/poteto-mode/playbooks/pause-safely.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
+- [`skills/poteto-mode/playbooks/multi-phase-plan.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
+- [`skills/poteto-mode/playbooks/worktree-cleanup.md`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)
