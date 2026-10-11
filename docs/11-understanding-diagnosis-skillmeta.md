@@ -4,9 +4,11 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 
 它有一个很具体的执行约定:匹配上一个 playbook 时,poteto-mode 会把这个 playbook 的步骤**原样拷贝**进 todo list。一个你决定不做的步骤,不删除,留在列表里,标一条 `skip: <原因>`。所以你永远能看到它选择不做什么。
 
-这一篇的五个 playbook 有个共同点:它们的交付物是答案,或者诊断,不是代码。它们的价值,是防止"手比脑子快"。
+这一篇的五个 playbook 有个共同点:**交付物是答案、诊断或一次被验证过的 skill 改动,不是代码。** 它们背后的想法是:探索、诊断、修复、评估是四种不同的认知姿态,混在一起会互相污染。它们的价值,是防止"手比脑子快"。
 
 ## investigation
+
+在弄清问题之前不要动手。理解一个问题的最好方式,是先让证据说话,而不是先改代码。
 
 `investigation` 处理只读的问题。它回答三种问法:这是怎么运作的,它为什么被造成这样,我们确定吗。
 
@@ -25,6 +27,8 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 一个误解会在重述里现形,纠正它只花一条消息。而如果直接让它改,一个误解会变成一次错误的修复。所以当成因不清楚时,先要发现,不要先要修复。
 
 ## runtime-forensics
+
+症状和原因分开,诊断和修复也分开。混在一起,你就没法判断修复是不是对着真原因。
 
 `runtime-forensics` 处理一个活着的症状:内存泄漏、空转的 CPU 占用、一个偶发的视觉 glitch。
 
@@ -46,6 +50,8 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 
 ## authoring-a-skill
 
+面向 agent 的散文就是行为:一句含糊的话,会被某个未来的 agent 真的执行。
+
 `authoring-a-skill` 是写或改一个 `SKILL.md` 的 playbook。
 
 它有一句判断前提值得记:面向 agent 的散文,比面向人的散文门槛更高。因为一句没用的话,在这里变成的是某个未来 agent 会真的去遵循的指令。人的文档里一句含糊的话只是让人皱眉,agent 的文档里一句含糊的话,是行为。
@@ -55,6 +61,8 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 有一个特例它单独处理。如果一个 skill 的职责是驱动你的应用并证明行为,那它是一个验证 skill,应该走 `create-verification-skill` 和 `maintain-verification-skill`,而不是普通的手写流程。
 
 ## eval
+
+观察者效应:一个知道自己被评估的 agent,行为会不一样。所以测试必须是盲的。
 
 `eval` 测的是一个 skill、结构或 prompt 的改动会不会改变 agent 的行为,在它被推广之前。
 
