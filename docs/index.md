@@ -2,6 +2,20 @@
 
 一套面向资深工程师的精读系列。把 pstack 这台机器,从原则到调度,整台拆开讲清楚。
 
+## pstack 的来历
+
+pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。她在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。
+
+她做这套东西的起点是一个判断:AI 正在写太多 slop,注水、低质的代码。而"跑得快但质量差"不是一个值得追求的目标。原文里有一句话被反复引用:
+
+> if you want to go fast, go deep first.
+>
+> 想快,先深。
+
+pstack 就是她对这件事的回答。它不是新工具,而是她本人在 Cursor 每天用来交付高质量代码的那一套 skill 和原则。目标不是最大化代码量,恰恰相反,它帮你写得更少,但质量更高。
+
+它最初是 Cursor 官方插件仓库 [`cursor/plugins`](https://github.com/cursor/plugins/tree/main/pstack) 里的一个插件。后来有人在独立仓库 [`backnotprop/pstack`](https://github.com/backnotprop/pstack) 维护了一份镜像,让它能用在 Cursor 之外的 harness 里。它现在是一个有一千五百多颗星的独立项目。
+
 ## pstack 是什么
 
 pstack 是给 AI 编程用的一套工作系统。它把"怎么和模型协作、把代码写好"这件事,拆成了四层:
@@ -56,20 +70,6 @@ AI coding 之后,软件工程的前提变了。
 - **无畏的并行。** 每个 agent 都能自证,你就敢同时开很多个。
 - **可以放手的运行。** 过夜跑、自动队列、项目级编排,都建立在"信得过"上。
 - **一个会自己变好的仓库。** 错误被编码成结构,而不是靠人反复提醒。
-
-## pstack 的来历
-
-pstack 的作者是 poteto([X](https://x.com/poteto) / [GitHub](https://github.com/backnotprop))。她在 Meta、Netflix、Cursor 写过几百万行代码,同时在 React 核心团队,参与 React Compiler 的构建和维护。
-
-她做这套东西的起点是一个判断:AI 正在写太多 slop,注水、低质的代码。而"跑得快但质量差"不是一个值得追求的目标。原文里有一句话被反复引用:
-
-> if you want to go fast, go deep first.
->
-> 想快,先深。
-
-pstack 就是她对这件事的回答。它不是新工具,而是她本人在 Cursor 每天用来交付高质量代码的那一套 skill 和原则。目标不是最大化代码量,恰恰相反,它帮你写得更少,但质量更高。
-
-它最初是 Cursor 官方插件仓库 [`cursor/plugins`](https://github.com/cursor/plugins/tree/main/pstack) 里的一个插件。后来有人在独立仓库 [`backnotprop/pstack`](https://github.com/backnotprop/pstack) 维护了一份镜像,让它能用在 Cursor 之外的 harness 里。它现在是一个有一千五百多颗星的独立项目。
 
 ## 这个系列
 
