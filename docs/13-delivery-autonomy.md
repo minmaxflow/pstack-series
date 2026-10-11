@@ -163,3 +163,15 @@ PR 是给一个人一分钟读完的 briefing,不是实验记录。它要让手�
 ## 今天就做一件事
 
 下一次你要 merge 一个栈之前,先做一次 shipping 的第一步:给每一个 PR 起一个 fresh agent,让它对着 parent 和 head 各跑一遍真实行为,把判决贴在 PR 上。你会发现至少有一个 PR 的"绿",和你以为的不是一回事。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/opening-a-pr.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/babysit.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/shipping.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autonomous-run.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-full.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/autopilot-stack.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/orchestrate.md)

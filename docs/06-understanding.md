@@ -259,3 +259,13 @@ Slack 是一把双刃剑。它经常是**真正的决定发生的地方**,尤其
 ## 今天就做一件事
 
 挑一段你觉得"为什么是这样"的代码,跑一次 `why`,然后把它的"我们不知道什么"那一节读完。如果你发现那一节是空的,或者全是没根据的确定语气,你正好看到了这个 skill 防的是什么。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`how`](https://github.com/backnotprop/pstack/blob/main/skills/how/SKILL.md)
+- [`why`](https://github.com/backnotprop/pstack/blob/main/skills/why/SKILL.md)
+- [`teach`](https://github.com/backnotprop/pstack/blob/main/skills/teach/SKILL.md)
+- [`recall`](https://github.com/backnotprop/pstack/blob/main/skills/recall/SKILL.md)
+- [`blast-radius`](https://github.com/backnotprop/pstack/blob/main/skills/blast-radius/SKILL.md)

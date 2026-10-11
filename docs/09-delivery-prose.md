@@ -154,3 +154,12 @@
 ## 今天就做一件事
 
 提交之前,分三样东西清。代码走 `deslop`,散文走 `unslop`,注释交给一个没写它的 reviewer。三件事指向同一个结论:让不在这段代码里投入过感情的人来看一遍。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`unslop`](https://github.com/backnotprop/pstack/blob/main/skills/unslop/SKILL.md)
+- [`technical-writing`](https://github.com/backnotprop/pstack/blob/main/skills/technical-writing/SKILL.md)
+- [`no-comments`](https://github.com/backnotprop/pstack/blob/main/skills/no-comments/SKILL.md)
+- [`typescript-best-practices`](https://github.com/backnotprop/pstack/blob/main/skills/typescript-best-practices/SKILL.md)

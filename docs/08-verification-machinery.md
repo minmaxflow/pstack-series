@@ -142,3 +142,12 @@
 ## 今天就做一件事
 
 如果你的项目还没有一个能在应用里自证的项目本地 skill,先建一个。这是 setup 里回报最高的一笔投入,没有之一。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`tdd`](https://github.com/backnotprop/pstack/blob/main/skills/tdd/SKILL.md)
+- [`benchmark-checklist`](https://github.com/backnotprop/pstack/blob/main/skills/benchmark-checklist/SKILL.md)
+- [`create-verification-skill`](https://github.com/backnotprop/pstack/blob/main/skills/create-verification-skill/SKILL.md)
+- [`maintain-verification-skill`](https://github.com/backnotprop/pstack/blob/main/skills/maintain-verification-skill/SKILL.md)

@@ -150,3 +150,14 @@ model-the-domain 是更上面的一层。它先选整体形状,后面几条都�
 如果答案是一个人的脑子里,或者几个散开的 if 里,那第一个决定不是写逻辑,是决定它该住进哪种结构。领域规则进结构,校验进边界,约束进类型,重启安全进操作,并发所有权进状态划分。
 
 下一篇是 Part I 的铰链:什么才算证明。它也是整个 pstack 的承重柱。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`principle-model-the-domain`](https://github.com/backnotprop/pstack/blob/main/skills/principle-model-the-domain/SKILL.md)
+- [`principle-boundary-discipline`](https://github.com/backnotprop/pstack/blob/main/skills/principle-boundary-discipline/SKILL.md)
+- [`principle-type-system-discipline`](https://github.com/backnotprop/pstack/blob/main/skills/principle-type-system-discipline/SKILL.md)
+- [`principle-make-operations-idempotent`](https://github.com/backnotprop/pstack/blob/main/skills/principle-make-operations-idempotent/SKILL.md)
+- [`principle-migrate-callers-then-delete-legacy-apis`](https://github.com/backnotprop/pstack/blob/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md)
+- [`principle-separate-before-serializing-shared-state`](https://github.com/backnotprop/pstack/blob/main/skills/principle-separate-before-serializing-shared-state/SKILL.md)

@@ -162,3 +162,15 @@
 ## 今天就做一件事
 
 下一次构建,先把两句话写清楚,再开始。一句是"我观察到了什么",一句是"done 怎么检查"。这两句就是路由信号,也是 playbook 愿意为你要证据的前提。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/feature.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/refactoring.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/bug-fix.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/perf-issue.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/hillclimb.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/prototype.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/visual-parity.md)

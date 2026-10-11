@@ -11,6 +11,22 @@ export default withMermaid(
     description: '面向资深工程师的 pstack 精读系列',
     base: '/pstack-series/',
     cleanUrls: true,
+    // 所有外部链接在新标签页打开。
+    markdown: {
+      config: (md) => {
+        const defaultRender =
+          md.renderer.rules.link_open ||
+          ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options))
+        md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+          const href = tokens[idx].attrGet('href')
+          if (href && /^https?:\/\//.test(href)) {
+            tokens[idx].attrSet('target', '_blank')
+            tokens[idx].attrSet('rel', 'noopener noreferrer')
+          }
+          return defaultRender(tokens, idx, options, env, self)
+        }
+      }
+    },
     lastUpdated: true,
     head: [['meta', { name: 'theme-color', content: '#3451b2' }]],
     themeConfig: {

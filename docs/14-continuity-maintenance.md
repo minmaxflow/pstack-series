@@ -81,3 +81,12 @@
 ## 今天就做一件事
 
 如果你今天要下线,而手上有在飞的活,别只是关掉。让 agent 走一次 pause,提交 checkpoint,写一份 resume note。明天你会感谢今天这五分钟。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/session-pickup.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/pause-safely.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/multi-phase-plan.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/worktree-cleanup.md)

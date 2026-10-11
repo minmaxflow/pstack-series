@@ -125,3 +125,13 @@ agent 报告完成了。CI 是绿的。你手动点了一下,功能是坏的。
 证明必须是一个别人能看到、能重跑的东西。一个脚本,一段命令输出,一个前后对比,一个写进去又被读回来的值。如果找不到这样的东西,那不是任务完成了,是任务还没到能给结论的阶段。
 
 下一篇开始 Part II。原则层讲完了,接下来讲这些命名好的原则被组织成了什么:先是能力层,skills。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`principle-prove-it-works`](https://github.com/backnotprop/pstack/blob/main/skills/principle-prove-it-works/SKILL.md)
+- [`principle-fix-root-causes`](https://github.com/backnotprop/pstack/blob/main/skills/principle-fix-root-causes/SKILL.md)
+- [`principle-sequence-verifiable-units`](https://github.com/backnotprop/pstack/blob/main/skills/principle-sequence-verifiable-units/SKILL.md)
+- [`principle-test-behavior-not-implementation`](https://github.com/backnotprop/pstack/blob/main/skills/principle-test-behavior-not-implementation/SKILL.md)
+- [`principle-explain-the-number`](https://github.com/backnotprop/pstack/blob/main/skills/principle-explain-the-number/SKILL.md)

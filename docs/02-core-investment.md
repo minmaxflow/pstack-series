@@ -147,3 +147,13 @@ experience-first 和 foundational-thinking 是一对。原文说得很清楚,基
 3. 核心的数据结构定了吗。没定就先定它,别先写逻辑。
 
 下一篇讲 Architecture:把领域装进结构里,把校验关在边界上,让非法状态无法表达,让操作可以重跑,以及在并发下先消除共享。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`principle-foundational-thinking`](https://github.com/backnotprop/pstack/blob/main/skills/principle-foundational-thinking/SKILL.md)
+- [`principle-experience-first`](https://github.com/backnotprop/pstack/blob/main/skills/principle-experience-first/SKILL.md)
+- [`principle-exhaust-the-design-space`](https://github.com/backnotprop/pstack/blob/main/skills/principle-exhaust-the-design-space/SKILL.md)
+- [`principle-build-the-lever`](https://github.com/backnotprop/pstack/blob/main/skills/principle-build-the-lever/SKILL.md)
+- [`principle-attack-the-premise`](https://github.com/backnotprop/pstack/blob/main/skills/principle-attack-the-premise/SKILL.md)

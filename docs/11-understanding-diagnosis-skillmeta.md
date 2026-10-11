@@ -83,3 +83,13 @@ Part III 讲 playbook。一个 playbook 是**程序**:它由 skill 编排而成,
 ## 今天就做一件事
 
 下次碰到一个"这是怎么回事"的问题,先走 `investigation`,让 agent 只给发现,不给修复。等发现指向一个确切的原因,再开一次新的任务去修它。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/investigation.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/runtime-forensics.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/trace-forensics.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/authoring-a-skill.md)
+- [`playbooks`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/playbooks/eval.md)

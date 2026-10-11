@@ -81,3 +81,11 @@ guard-the-context-window 和 never-block-on-the-human 把上限从单个会话�
 边界也要说清。never-block-on-the-human 的前提是动作可逆。encode-lessons-in-structure 的前提是这条教训确实重复出现。一次怪异的会话是一个轶事,不是一条规则。
 
 到这里,Part I 结束。原则层讲完了。你现在手里有 24 个名字,它们是一套共享的词汇,也是后面整台机器引用的底层接口。接下来 Part II 讲这些名字被组织成了什么。第一站是能力层,skills。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`principle-guard-the-context-window`](https://github.com/backnotprop/pstack/blob/main/skills/principle-guard-the-context-window/SKILL.md)
+- [`principle-never-block-on-the-human`](https://github.com/backnotprop/pstack/blob/main/skills/principle-never-block-on-the-human/SKILL.md)
+- [`principle-encode-lessons-in-structure`](https://github.com/backnotprop/pstack/blob/main/skills/principle-encode-lessons-in-structure/SKILL.md)

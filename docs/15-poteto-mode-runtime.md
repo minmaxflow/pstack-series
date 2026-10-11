@@ -120,3 +120,11 @@ flowchart LR
 ## 今天就做一件事
 
 下一次你敲 `poteto-mode`,先别急着看它做了什么,先看 todo list 的**前几条**。那几条就是它替你选的那个程序。读它们,你就知道这次它会走一条什么样的路。
+
+## 读原文
+
+这一篇拆的是 pstack 仓库里的这几份文件,想读一手材料从这里进:
+
+- [`poteto-mode`](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md)
+- [`agents`](https://github.com/backnotprop/pstack/blob/main/agents/poteto-agent.md)
+- [`agents`](https://github.com/backnotprop/pstack/blob/main/agents/comment-sicko.md)
