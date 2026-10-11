@@ -33,6 +33,11 @@ const css = `
 .wx tr:nth-child(even) td { background: #f8f9fb; }
 .wx hr { border: none; border-top: 1px solid #e4e7eb; margin: 2em 0; }
 .wx img { max-width: 100%; display: block; margin: 1.3em auto; border-radius: 6px; }
+.wx .refs h2 { font-size: 11px; font-weight: 600; line-height: 1.4; margin: 2.4em 0 0.4em; padding: 0; border: none; text-align: left; color: #94a3b8; }
+.wx .refs p { font-size: 10px; line-height: 1.6; color: #94a3b8; margin: 0.5em 0; }
+.wx .refs ul { margin: 0.3em 0; padding-left: 1.1em; }
+.wx .refs li { font-size: 10px; line-height: 1.7; color: #94a3b8; margin: 0.15em 0; }
+.wx .refs code { font-size: 10px; background: #f4f5f7; color: #94a3b8; padding: 1px 3px; }
 `
 
 marked.setOptions({ gfm: true, breaks: false })
@@ -61,7 +66,9 @@ const built = []
 
 for (const file of files) {
   const md = fs.readFileSync(path.join(docsDir, file), 'utf8')
-  const body = marked.parse(toWechatMarkdown(md.replace(/^#\s+.*\r?\n/, '')))
+  let body = marked.parse(toWechatMarkdown(md.replace(/^#\s+.*\r?\n/, '')))
+  // 文末“参考”整块单独包一层,方便调小字号。
+  body = body.replace(/(<h2[^>]*>参考<\/h2>[\s\S]*)$/, '<section class="refs">$1</section>')
   const section = juice(`<style>${css}</style><section class="wx">${body}</section>`)
   const h1 = (md.match(/^#\s+(.+)$/m) || [, file.replace(/\.md$/, '')])[1].trim()
   // 完整 HTML5 文档,带 viewport,手机浏览器才按设备宽度渲染,不会横向滑动。
