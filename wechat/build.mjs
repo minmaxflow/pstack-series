@@ -14,7 +14,7 @@ const docsDir = path.join(root, 'docs')
 const outDir = path.join(root, 'wechat', 'out')
 
 const css = `
-.wx { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 16px; color: #1f2328; background: #fbfbfa; line-height: 1.9; word-break: break-word; max-width: 720px; margin: 0 auto; padding: 22px 18px; box-sizing: border-box; }
+.wx { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 16px; color: #1f2328; line-height: 1.9; word-break: break-word; }
 .wx h2 { font-size: 18px; font-weight: 700; line-height: 1.5; margin: 2.2em 0 0.9em; text-align: center; color: #111827; }
 .wx h3 { font-size: 16.5px; font-weight: 700; line-height: 1.5; margin: 1.6em 0 0.5em; color: #33475b; }
 .wx p { margin: 1.1em 0; }
@@ -61,11 +61,11 @@ const built = []
 
 for (const file of files) {
   const md = fs.readFileSync(path.join(docsDir, file), 'utf8')
-  const body = marked.parse(toWechatMarkdown(md))
+  const body = marked.parse(toWechatMarkdown(md.replace(/^#\s+.*\r?\n/, '')))
   const section = juice(`<style>${css}</style><section class="wx">${body}</section>`)
   const h1 = (md.match(/^#\s+(.+)$/m) || [, file.replace(/\.md$/, '')])[1].trim()
   // 完整 HTML5 文档,带 viewport,手机浏览器才按设备宽度渲染,不会横向滑动。
-  const html = `<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>${h1}</title>\n<style>html { -webkit-text-size-adjust: 100%; } body { margin: 0; background: #fbfbfa; }</style>\n</head>\n<body>\n${section}\n</body>\n</html>\n`
+  const html = `<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>${h1}</title>\n<style>html { -webkit-text-size-adjust: 100%; } body { margin: 0; }</style>\n</head>\n<body>\n${section}\n</body>\n</html>\n`
   const out = file.replace(/\.md$/, '.html')
   fs.writeFileSync(path.join(outDir, out), html, 'utf8')
   built.push(out)
